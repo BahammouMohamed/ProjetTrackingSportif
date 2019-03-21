@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -10,6 +12,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {GoogleMaps} from "@ionic-native/google-maps";
+import {UserService} from "../services/users.service";
+import {ActivitiesService} from "../services/activities.service";
+import {Chrono} from "../utils/chrono";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +28,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicStorageModule.forRoot(),
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +43,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpClient,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoogleMaps,
+    Geolocation,
+    Chrono,
+    ActivitiesService,
+    UserService,
   ]
 })
 export class AppModule {}

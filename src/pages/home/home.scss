@@ -1,3 +1,63 @@
 page-home {
+  #map {
+    width: 100%;
+    height: 400px;
+  }
+  ion-header {
+    height: 100px;
+    overflow: hidden;
+    color: white;
 
+    img {
+      transform: -50px;
+    }
+
+    ion-navbar {
+      position: absolute;
+      bottom: 5%;
+
+      .toolbar-background {
+        background: transparent !important;
+        border-width: 0 !important;
+      }
+      .toolbar-title {
+        color: white;
+        font-size: 2.5rem;
+      }
+      .back-button {
+        color: white;
+      }
+
+      ion-title {
+        color: white;
+      }
+    }
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  #map-container {
+    height: 200px;
+    border-radius: 10px;
+    // overflow: hidden;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .timer-buttons {
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      flex:1;
+    }
+  }
 }
+
