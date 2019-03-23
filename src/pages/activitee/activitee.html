@@ -1,0 +1,33 @@
+
+<ion-content padding>
+
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="navigate"></ion-icon> <span margin-left>Tracking</span>
+    </ion-card-header>
+    <ion-card-content>
+      <div id="map-container">
+        <div #map id="map"></div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="stopwatch"></ion-icon> <span margin-left>Temps écoulé</span>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 no-margin>{{chrono.displayTime}}</h1>
+      <div margin-top *ngIf="!isStopped" class="timer-buttons">
+        <button ion-button color="secondary" *ngIf="!isStopped && isPaused" (click)="reprendreActivity()"><ion-icon name="play"></ion-icon></button>
+        <button ion-button color="warning" *ngIf="!isStopped && !isPaused" (click)="pauseActivity()"><ion-icon name="pause"></ion-icon></button>
+        <button ion-button color="danger" *ngIf="!isStopped" (click)="stopConfirm('button')"><ion-icon name="square"></ion-icon></button>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

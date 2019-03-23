@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Historique</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="grey-background">
+
+  <ion-grid style="height: 100%">
+
+    <div *ngFor="let sport of this.sports.sports">
+      <ion-card justify-content-center align-items-center (click)="loadSportHistoryPage(sport)">
+        <div >{{sport.type}}</div>
+      </ion-card>
+    </div>
+  </ion-grid>
+
+</ion-content>

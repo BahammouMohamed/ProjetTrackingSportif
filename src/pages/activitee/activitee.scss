@@ -1,0 +1,60 @@
+page-activitee {
+  #map {
+    width: 100%;
+    height: 200px;
+  }
+  ion-header {
+    height: 100px;
+    overflow: hidden;
+    color: white;
+
+    img {
+      transform: -50px;
+    }
+
+    ion-navbar {
+      position: absolute;
+      bottom: 5%;
+
+      .toolbar-background {
+        background: transparent !important;
+        border-width: 0 !important;
+      }
+      .toolbar-title {
+        color: white;
+        font-size: 2.5rem;
+      }
+      .back-button {
+        color: white;
+      }
+
+      ion-title {
+        color: white;
+      }
+    }
+  }
+
+  #map-container {
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .timer-buttons {
+    display:flex;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display:block;
+      height: 50px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+}

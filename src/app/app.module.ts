@@ -17,6 +17,12 @@ import {UserService} from "../services/users.service";
 import {ActivitiesService} from "../services/activities.service";
 import {Chrono} from "../utils/chrono";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ListActiviteesPage} from "../pages/list-activitees/list-activitees";
+import {ProfilePage} from "../pages/profile/profile";
+import {ActiviteePage} from "../pages/activitee/activitee";
+import {Sports} from "../utils/sport";
+import {HistoriquePage} from "../pages/historique/historique";
+import {HistoriqueActiviteePage} from "../pages/historique-activitee/historique-activitee";
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ListActiviteesPage,
+    ProfilePage,
+    ActiviteePage,
+    HistoriquePage,
+    HistoriqueActiviteePage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,12 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ListActiviteesPage,
+    ProfilePage,
+    ActiviteePage,
+    HistoriquePage,
+    HistoriqueActiviteePage
   ],
   providers: [
     StatusBar,
@@ -48,6 +64,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     GoogleMaps,
     Geolocation,
     Chrono,
+    Sports,
     ActivitiesService,
     UserService,
   ]
